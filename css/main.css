@@ -1,0 +1,956 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+body {
+    background: #d6e1e9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #d6e1e9, #c3cbd0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #d6e1e9, #c3cbd0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 100vh;
+    font-family: "Roboto", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #7479a2;
+}
+
+[class*="nav"] ul,
+nav ul,
+[class*="nav"] {
+    list-style: none;
+    padding:  0;
+    margin:  0;
+}
+
+.page-wrap {
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin:  0 auto;
+}
+
+.top-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 60px;
+    background: #fff;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.15);
+    z-index: 999999;
+}
+
+.page {
+    padding-top: 100px;
+}
+
+.right-panel {
+    position: relative;
+    z-index: 2;
+    padding-right: 60px;
+}
+
+
+body.va-opened .right-panel {
+    width: calc(100%-260px);
+}
+.right-panel .wrap {
+    background: #fff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+    min-height: 120vh;
+}
+
+
+.sub-nav {
+    padding-top: 4rem;
+    position: relative;
+}
+
+.left-tab li {
+    position: relative;
+    height: 40px;
+}
+
+.left-tab li a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #fff;
+    position: absolute;
+    right: 0;
+    padding:  0 5px;
+    color: #fff;
+    box-shadow: -1px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.left-tab li a i {
+    width: 30px;
+    height: 40px;
+    padding-left: 5px;
+    line-height: 40px;
+    text-align: right;
+    float: left;
+    font-size: 1.2em;
+}
+
+.left-tab li a:hover .txt  {
+    opacity: 1;
+    max-width: 300px;
+}
+
+.left-tab li a .txt {
+    font-size: 0.8em;
+    max-width: 0;
+    overflow: hidden;
+    opacity: 0;
+    display: inline-block;
+    padding: 0 10px;
+    text-transform: uppercase;
+    transition: all 0.3s cubic-bezier(.91,.19,.26,.96);
+    margin: 0;
+}
+
+.left-tab li .dashboard {
+    background: #8560a8;
+}
+
+.left-tab li .calendar {
+    background: #605ca8;
+}
+
+.left-tab li .people {
+    background: #448ccb;
+}
+
+.left-tab li .reports {
+    background: #00a99d;
+}
+
+.left-tab li.active a {
+    background: #fff;
+    z-index: 3;
+    box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.left-tab li.active a.dashboard {
+    color: #8560a8;
+}
+
+.left-tab li.active a.calendar {
+    color: #605ca8;
+}
+
+.left-tab li.active a.people {
+    color: #448ccb;
+}
+
+.left-tab li.active a.reports {
+    color: #00a99d;
+}
+
+.panel-header {
+    height: 4rem;
+    line-height: 1;
+    box-sizing: border-box;
+    padding: 0 15px;
+    background: #f8f8f8;
+    border-bottom: solid 1px #eee;
+}
+
+.panel-header h1 {
+    display: block;
+    margin:  0;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+a.logo {
+    height: 60px;
+    line-height: 60px;
+}
+
+.top-nav a{
+    color: #999;
+}
+
+.top-nav ul li {
+    display: inline-block;
+}
+
+.top-nav ul.primary-nav > li > a,
+.top-nav ul.secondary-nav > li > a {
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+}
+
+.primary-nav li {
+    padding: 0 1rem;
+}
+
+.primary-nav li a {
+    position: relative;
+    letter-spacing: 0.15pt;
+    font-weight: 300;
+    color: #999;
+    transition: all 0.3s ease-in-out;
+}
+
+.primary-nav li.active a {
+    font-weight: 500;
+    color: #d75f8a;
+}
+
+.primary-nav li a:hover {
+    color: #d75f8a;
+}
+
+.primary-nav li a:after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 50%;
+    width: 0;
+    bottom: -1px;
+    height: 3px;
+    background: #d75f8a;
+    transition: all 0.3s cubic-bezier(.91,.19,.26,.96);
+}
+
+.primary-nav li.active a:after,
+.primary-nav li a:hover:after {
+    opacity: 1;
+    left:  50%;
+    width: 100%;
+    margin-left: -50%;
+}
+
+.secondary-nav {
+    text-align: right;
+}
+
+#va-wrap {
+    position: fixed;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    bottom: 2rem;
+    z-index: 999;
+}
+
+#va-wrap .va-trigger {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background: #3cb878;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease-in;
+    float: right;
+    position: fixed;
+    right: 2rem;
+    z-index: 9999;
+}
+
+#va-wrap .va-trigger.pulse:not(.clicked) {
+    background: #3cb878;
+    transition: all 0.5s ease-in;
+}
+
+#va-wrap .va-trigger:hover {
+
+}
+
+.block {
+    border:  solid 1px #eee;
+    background: #fff;
+}
+
+.main-section {
+    padding: 20px;
+}
+
+.summary-blocks {
+    list-style: none;
+    padding:  0;
+    margin:  0;
+}
+
+.summary-blocks li {
+    padding:  1rem;
+    border-right: solid 1px #eee;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: 300;
+}
+
+.summary-blocks li:hover {
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.15);
+}
+
+.summary-blocks li:last-child {
+    border-right: none;
+}
+
+.summary-blocks li span {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.summary-blocks li .donut {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border:  solid 3px #ddd;
+    text-align: center;
+    line-height: 46px;
+    font-weight: 300;
+    color: #999;
+    box-sizing: border-box;
+    position: relative;
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+.summary-blocks li .donut.percent-50:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 25px;
+    left: -3px;
+    top: -3px;
+    background: transparent;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border: 3px solid #00aeef;
+    border-bottom: 0;
+    box-sizing: border-box;
+}
+
+.summary-blocks li .label {
+    font-size: 0.8em;
+    padding-top: 9px;
+    color: #999;
+    text-align: left;
+}
+
+.summary-blocks li .donut.amber {
+    border-color: #fbaf5d;
+    color: #fbaf5d;
+}
+
+.summary-blocks li .donut.red {
+    border-color: #ed145b;
+    color: #ed145b;
+}
+
+.summary-blocks li .donut.green {
+    border-color: #3cb878;
+    color: #3cb878;
+}
+
+.va-notification-bar {
+    background: #fff;
+    width: 220px;
+    height: 60px;
+    position: absolute;
+    right: 60px;
+    top: -5px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.va-notification-bar .notify-txt {
+    display: inline-block;
+    width: calc(100% - 55px);
+    vertical-align: top;
+    font-size: 0.7em;
+    height: 60px;
+    box-sizing: border-box;
+    padding: 8px 5px 0 5px;
+    overflow: hidden;
+}
+
+.va-notification-bar span.icon {
+    width: 40px;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 1.4em;
+    border-right:  solid 1px #eee;
+    color: #3cb878;
+}
+
+.va-notification-bar span.time {
+    font-size: 0.8em;
+    display: block;
+    opacity: 0.5;
+}
+
+.va-notification-bar span.time.fresh {
+    color: #f26d7d;
+}
+
+.va-notification-bar p.notify-msg {
+    margin: 0;
+    font-size: 0.9em;
+    display: block;
+    height: 28px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #999;
+    font-weight: 300;
+    margin-top: 3px;
+}
+
+#va-wrap .assistant-ui {
+    background: #fff;
+    position: absolute;
+    box-shadow: 1px 1px 20px rgba(0,0,0,0.1);
+    border: solid 1px #eee;
+    padding: 10px;
+    top: 100px;
+    bottom: 60px;
+    right: 80px;
+    z-index: 999;
+    left: 0;
+}
+
+.assistant-ui .chat-list {
+    position: relative;
+    background: #e5ebed;
+    width: 100%;
+    height: calc(100% - 130px);
+    border-radius: 0;
+    overflow: hidden;
+    border: solid 1px #eee;
+    box-sizing: border-box;
+}
+
+.assistant-ui header {
+    height: 60px;
+    overflow: hidden;
+    background: #3cb878;
+    color: #fff;
+    box-shadow: 0 1px 20px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 99;
+}
+
+.assistant-ui header h2 {
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    height: 60px;
+    margin: 0;
+    line-height: 60px;
+    padding: 0 15px;
+    font-weight: 300;
+}
+
+.assistant-ui a.action-btn {
+    float: right;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 15px;
+    color: #fff;
+}
+
+.chat-list ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    right: -15px;
+}
+
+.chat-list .item {
+    font-size: 0.8rem;
+    margin: 20px 10px;
+}
+
+.chat-list .item .time {
+    font-size: 0.8em;
+    opacity: 0.5;
+    display: block;
+    margin: 0;
+}
+
+.chat-list li .msg {
+    margin: 0;
+    font-size: 0.9em;
+    display: block;
+    padding: 5px 0;
+}
+
+.chat-list .item .avtar {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: top;
+    border-radius: 30px;
+    background: #000;
+    margin-top: -10px;
+    line-height: 28px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.chat-list .item .avtar svg {
+    display: inline-block;
+    margin-left: 1px;
+}
+
+.chat-list .item.by-va .avtar {
+    background: #3cb878;
+}
+
+.chat-list .item.by-you .avtar {
+    background: #448ccb;
+}
+
+.chat-list .item.by-you .avtar:before {
+    content: 'You';
+    display: block;
+    position: absolute;
+    font-size: 9px;
+    color: #000;
+    opacity: 0.5;
+    bottom:  -20px;
+    width: 30px;
+    text-align: center;
+}
+
+.chat-list .item .content {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 35px);
+    padding: 10px;
+    box-sizing: border-box;
+    background: #fff;
+    border: solid 1px #ddd;
+    border-radius: 14px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+
+body.va-opened .page-wrap.row {
+    justify-content: flex-start;
+}
+
+
+body.va-opened .va-notification-bar {
+    opacity: 0;
+    z-index: -100;
+    display: none;
+}
+
+body.va-opened section#va-wrap {
+    width: calc(8.33333% * 4);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;
+}
+
+.va-opened a.va-trigger {
+    position: absolute !important;
+    bottom: 30px;
+    margin-right: 20px;
+}
+
+.chat-form {
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+    right: 0;
+    left: 0;
+    padding: 15px;
+    background: #fff;
+    border-top: solid 1px #ddd;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 99;
+}
+
+.chat-field {
+    height: 40px;
+    border: solid 1px #ddd;
+    position: relative;
+}
+
+.chat-field input {
+    display: block;
+    border:  none;
+    outline: none;
+    background: transparent;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    padding:  0 10px;
+}
+
+span.voice-icon {
+    position: absolute;
+    height: 40px;
+    top: 0;
+    right: 0;
+    line-height: 40px;
+    font-size: 1.2em;
+    width: 40px;
+    text-align: center;
+    color: #3cb878;
+}
+
+.chat-list .item.by-va .content {
+    border-radius: 0 14px 14px 14px;
+}
+
+.chat-list .item.by-you .content {
+    border-radius: 14px 0 14px 14px;
+}
+
+.va-quick-help {
+    height: 40px;
+    position: absolute;
+    background: #448ccb;
+    padding: 10px;
+    font-size: 12px;
+    right: 10px;
+    left: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    opacity: 0;
+    top: 0;
+    z-index: 98;
+    transition: opacity 0.2s ease-in, top 0.2s ease-in;
+    color: #fff;
+}
+
+.assistant-ui.infocus .va-quick-help {
+    top: 70px;
+    opacity: 1;
+}
+
+.va-quick-help i.fa {
+    margin-right: 10px;
+}
+
+.va-quick-help a {
+    display: inline-block;
+    vertical-align: middle;
+    padding:  4px;
+    border:  solid 1px #fff;
+    color: #fff;
+    margin-left:  10px;
+}
+
+.va-quick-help h3 {
+    font-weight: 300;
+    font-size: 12px;
+    margin: 0;
+    padding: 0 20px;
+    text-align: center;
+    padding-top: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
